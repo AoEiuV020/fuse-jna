@@ -1,8 +1,0 @@
-#!/bin/bash
-
-set -e
-
-scriptDir=$(dirname "$BASH_SOURCE")
-
-gcc -o "$scriptDir/dump-stat.bin" "$scriptDir/dump-stat.c"
-exec "$scriptDir/dump-stat.bin" "$@"

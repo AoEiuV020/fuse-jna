@@ -9,6 +9,7 @@ repositories {
 }
 dependencies {
 	compile 'net.java.dev.jna:jna:4.4.0'
+    compile 'junit:junit:4.12'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
