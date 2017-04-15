@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/EtiennePerot/fuse-jna.png)](https://travis-ci.org/EtiennePerot/fuse-jna)
+[![](https://jitpack.io/v/AoEiuV020/fuse-jna.svg)](https://jitpack.io/#AoEiuV020/fuse-jna)
 
 ## The straight dope
 #### Grab it
