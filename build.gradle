@@ -1,10 +1,33 @@
 apply plugin: 'java'
-apply plugin: 'application'
+apply plugin: 'maven'
+
+group = 'com.github.AoEiuV020'
+compileJava.options.encoding = 'UTF-8'
 
 repositories {
 	mavenCentral()
 }
-
 dependencies {
 	compile 'net.java.dev.jna:jna:4.4.0'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet') //ignore all warnings,
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
 }
