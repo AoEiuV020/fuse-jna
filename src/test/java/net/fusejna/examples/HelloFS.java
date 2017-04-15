@@ -44,7 +44,7 @@ public class HelloFS extends FuseFilesystemAdapterFull
 	{
 		// Compute substring that we are being asked to read
 		final String s = contents.substring((int) offset,
-				(int) Math.max(offset, Math.min(contents.length() - offset, offset + size)));
+				(int) Math.max(offset, Math.min(contents.length(), offset + size)));
 		buffer.put(s.getBytes());
 		return s.getBytes().length;
 	}
