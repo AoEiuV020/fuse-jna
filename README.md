@@ -1,20 +1,12 @@
 [![](https://jitpack.io/v/AoEiuV020/fuse-jna.svg)](https://jitpack.io/#AoEiuV020/fuse-jna)
 
 ## The straight dope
-#### Grab it
 
-    git clone git://github.com/EtiennePerot/fuse-jna.git
+#### Test it
 
-#### Run it
+    ./gradlew test --tests net.fusejna.examples.MountTest.hello
 
-    fuse-jna/examples/hellofs.sh ~/hellofs
-
-You now have a test filesystem in `~/hellofs`.
-You'll find a file called `hello.txt` in there.
-
-There's another example filesystem that you can use, which is writable:
-
-    fuse-jna/examples/memoryfs.sh ~/memoryfs
+see [src/test/java/net/fusejna/examples/MountTest.java](src/test/java/net/fusejna/examples/MountTest.java)
 
 #### Make your own filesystem
 
